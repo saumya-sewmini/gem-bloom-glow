@@ -301,7 +301,7 @@ function Hero() {
             <span className="size-1.5 rounded-full bg-gold" />
             Est. 1984 · Ratnapura, Sri Lanka
           </div>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-balance text-primary">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-balance text-primary">
             Discover authentic{" "}
             <span className="italic text-emerald">natural gemstones</span>{" "}
             from Sri Lanka
@@ -352,12 +352,12 @@ function Hero() {
             />
 
             {/* Floating cards */}
-            <div className="absolute -top-4 -left-4 md:-left-10 bg-card/95 backdrop-blur-md rounded-2xl px-5 py-4 shadow-[var(--shadow-card)] ring-1 ring-border animate-float">
+            <div className="absolute -top-4 left-2 sm:-left-4 md:-left-10 bg-card/95 backdrop-blur-md rounded-2xl px-5 py-4 shadow-[var(--shadow-card)] ring-1 ring-border animate-float">
               <div className="text-[9px] uppercase tracking-[0.2em] text-gold font-semibold">Featured</div>
               <div className="mt-1 font-display text-lg leading-tight">Royal Blue Sapphire</div>
               <div className="text-[11px] text-muted-foreground">4.28 ct · Unheated · GRS</div>
             </div>
-            <div className="absolute -bottom-6 -right-4 md:-right-10 bg-card/95 backdrop-blur-md rounded-2xl px-5 py-4 shadow-[var(--shadow-card)] ring-1 ring-border animate-float [animation-delay:1s]">
+            <div className="absolute -bottom-6 right-2 sm:-right-4 md:-right-10 bg-card/95 backdrop-blur-md rounded-2xl px-5 py-4 shadow-[var(--shadow-card)] ring-1 ring-border animate-float [animation-delay:1s]">
               <div className="flex items-center gap-3">
                 <div className="size-9 rounded-full bg-emerald-soft grid place-items-center text-emerald">
                   <Icon className="size-4" path="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -400,7 +400,7 @@ function Categories() {
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
         <div className="max-w-xl">
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">The Collection</div>
-          <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary">
             Sixteen varieties, <span className="italic text-emerald">one standard</span>
           </h2>
           <p className="mt-5 text-muted-foreground max-w-md">
@@ -412,7 +412,7 @@ function Categories() {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
         {CATEGORIES.map((c) => (
           <a
             key={c.name}
@@ -426,7 +426,7 @@ function Categories() {
                 {c.count} avail.
               </div>
             </div>
-            <div className="p-4">
+            <div className="p-3 sm:p-4">
               <div className="font-display text-lg md:text-xl leading-tight text-primary">{c.name}</div>
               <div className="text-[11px] text-muted-foreground mt-0.5 truncate">{c.note}</div>
               <div className="mt-3 flex items-center justify-between">
@@ -450,11 +450,11 @@ function WhyUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-24 lg:py-32">
         <div className="max-w-2xl mb-16">
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">Why Aurum</div>
-          <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary">
             Provenance, transparency, and quiet <span className="italic text-emerald">expertise</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 sm:gap-y-12">
           {WHY.map(([title, body], i) => (
             <div key={title} className="group">
               <div className="flex items-center gap-4 mb-4">
@@ -479,7 +479,7 @@ function Featured() {
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
         <div>
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">New Acquisitions</div>
-          <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary">
             Exceptional stones, <span className="italic text-emerald">hand-selected</span>
           </h2>
         </div>
@@ -511,7 +511,7 @@ function Featured() {
                   {p.stock}
                 </span>
               </div>
-              <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity">
                 <IconChip label="Wishlist" path="M12 21s-7-4.35-7-10a4 4 0 017-2.646A4 4 0 0119 11c0 5.65-7 10-7 10z" />
                 <IconChip label="Compare" path="M3 6h13m-13 6h13m-13 6h13M20 4v16" />
                 <IconChip label="Quick view" path="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" />
@@ -533,10 +533,10 @@ function Featured() {
                 <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Ex. shipping</span>
               </div>
               <div className="mt-4 grid grid-cols-2 gap-2">
-                <button className="bg-primary text-primary-foreground text-[11px] uppercase tracking-widest font-semibold py-3 rounded-full hover:bg-primary/90 transition">
+                <button className="bg-primary text-primary-foreground text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold py-2.5 sm:py-3 rounded-full hover:bg-primary/90 transition">
                   Add to cart
                 </button>
-                <button className="border border-border text-[11px] uppercase tracking-widest font-semibold py-3 rounded-full hover:border-primary hover:text-primary transition">
+                <button className="border border-border text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold py-2.5 sm:py-3 rounded-full hover:border-primary hover:text-primary transition">
                   Request quote
                 </button>
               </div>
@@ -577,7 +577,7 @@ function Certifications() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">Certifications</div>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary mb-6">
               Independently verified by the world's{" "}
               <span className="italic text-emerald">leading laboratories</span>
             </h2>
@@ -591,11 +591,11 @@ function Certifications() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
             {CERTS.map((c) => (
               <div
                 key={c}
-                className="aspect-[4/3] rounded-2xl bg-background ring-1 ring-border grid place-items-center p-4 shadow-[var(--shadow-card)] hover:ring-gold transition-colors"
+                className="aspect-[4/3] rounded-2xl bg-background ring-1 ring-border grid place-items-center p-3 sm:p-4 shadow-[var(--shadow-card)] hover:ring-gold transition-colors"
               >
                 <div className="text-center">
                   <div className="font-display text-2xl text-primary tracking-tight">{c}</div>
@@ -614,12 +614,12 @@ function Certifications() {
 
 function GuaranteeCard({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl bg-background ring-1 ring-border p-5 shadow-[var(--shadow-card)]">
+    <div className="rounded-2xl bg-background ring-1 ring-border p-4 sm:p-5 shadow-[var(--shadow-card)]">
       <div className="size-9 rounded-full bg-gold-soft grid place-items-center text-gold mb-3">
         <Icon path="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </div>
-      <div className="font-display text-lg text-primary">{title}</div>
-      <div className="text-xs text-muted-foreground mt-1">{body}</div>
+      <div className="font-display text-base sm:text-lg text-primary">{title}</div>
+      <div className="text-[11px] sm:text-xs text-muted-foreground mt-1">{body}</div>
     </div>
   );
 }
@@ -631,7 +631,7 @@ function Process() {
     <section className="mx-auto max-w-7xl px-4 sm:px-6 py-24 lg:py-32">
       <div className="max-w-2xl mx-auto text-center mb-16">
         <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">Our Process</div>
-        <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary">
           From the earth of Ceylon <br className="hidden sm:block" />
           <span className="italic text-emerald">to your hand</span>
         </h2>
@@ -662,7 +662,7 @@ function Testimonials() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-24 lg:py-32">
         <div className="max-w-2xl mb-16">
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">Client Testimonials</div>
-          <h2 className="font-display text-4xl md:text-5xl leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight">
             Trusted by collectors <span className="italic text-gold">worldwide</span>
           </h2>
         </div>
@@ -676,7 +676,7 @@ function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <blockquote className="font-display italic text-xl leading-relaxed text-primary-foreground/90 flex-1">
+              <blockquote className="font-display italic text-lg sm:text-xl leading-relaxed text-primary-foreground/90 flex-1">
                 "{t.text}"
               </blockquote>
               <figcaption className="mt-6 pt-6 border-t border-white/10 flex items-center gap-4">
@@ -706,7 +706,7 @@ function Shipping() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">Worldwide Shipping</div>
-          <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary mb-6">
             Fully insured delivery to <span className="italic text-emerald">120+ countries</span>
           </h2>
           <p className="text-muted-foreground mb-8">
@@ -739,9 +739,9 @@ function Shipping() {
               </g>
             ))}
           </svg>
-          <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between bg-background/90 backdrop-blur rounded-full ring-1 ring-border px-5 py-3">
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Avg. delivery</div>
-            <div className="font-display text-lg text-primary">3–5 business days</div>
+          <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 flex items-center justify-between bg-background/90 backdrop-blur rounded-full ring-1 ring-border px-4 py-2.5 sm:px-5 sm:py-3">
+            <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-muted-foreground">Avg. delivery</div>
+            <div className="font-display text-base sm:text-lg text-primary">3–5 business days</div>
           </div>
         </div>
       </div>
@@ -852,7 +852,7 @@ function FAQPreview() {
     <section className="mx-auto max-w-4xl px-4 sm:px-6 py-24 lg:py-32">
       <div className="text-center mb-14">
         <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">FAQ</div>
-        <h2 className="font-display text-4xl md:text-5xl leading-tight text-primary">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-primary">
           Answers to <span className="italic text-emerald">common questions</span>
         </h2>
       </div>
@@ -860,7 +860,7 @@ function FAQPreview() {
         {FAQ.map(([q, a], i) => (
           <details key={i} className="group py-6" open={i === 0}>
             <summary className="flex items-center justify-between cursor-pointer list-none gap-6">
-              <span className="font-display text-xl md:text-2xl text-primary">{q}</span>
+              <span className="font-display text-lg sm:text-xl md:text-2xl text-primary">{q}</span>
               <span className="grid place-items-center size-8 rounded-full ring-1 ring-border text-gold shrink-0 transition-transform group-open:rotate-45">
                 <Icon className="size-4" path="M12 5v14M5 12h14" />
               </span>
@@ -883,12 +883,12 @@ function FAQPreview() {
 function ContactCTA() {
   return (
     <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 pb-24">
-      <div className="relative overflow-hidden rounded-3xl bg-[image:var(--gradient-sapphire)] text-white p-10 md:p-16 shadow-[var(--shadow-luxury)]">
+      <div className="relative overflow-hidden rounded-3xl bg-[image:var(--gradient-sapphire)] text-white p-6 sm:p-10 md:p-16 shadow-[var(--shadow-luxury)]">
         <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_80%_20%,oklch(0.72_0.11_75/0.6),transparent_50%)]" aria-hidden />
-        <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+        <div className="relative grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
           <div>
             <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">Private Consultation</div>
-            <h2 className="font-display text-4xl md:text-6xl leading-[1.05] text-white">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white">
               Speak with a master <span className="italic text-gold">gemologist</span>
             </h2>
             <p className="mt-6 text-white/80 max-w-lg">
@@ -920,8 +920,8 @@ function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-20 pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
+          <div className="col-span-1 xs:col-span-2 md:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <span className="grid place-items-center size-9 rounded-full bg-[image:var(--gradient-gold)] text-primary font-display text-lg italic">A</span>
               <span className="font-display text-2xl">Aurum <span className="italic text-gold">Ceylon</span></span>
