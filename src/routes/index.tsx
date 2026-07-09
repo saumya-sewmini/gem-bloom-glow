@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import {
@@ -732,7 +731,7 @@ function Shipping() {
             </defs>
             <path d="M20,55 Q30,35 45,40 T80,45 Q95,25 110,35 T150,40 Q165,30 180,45 L180,70 Q160,80 140,72 T100,75 Q75,85 55,75 T25,72 Z" fill="url(#dots)" />
             {/* pins */}
-            {[[38,52],[70,44],[95,50],[125,42],[155,48],[100,66],[140,58]].map(([x,y], i) => (
+            {[[38, 52], [70, 44], [95, 50], [125, 42], [155, 48], [100, 66], [140, 58]].map(([x, y], i) => (
               <g key={i}>
                 <circle cx={x} cy={y} r="2.5" className="fill-gold" />
                 <circle cx={x} cy={y} r="5" className="fill-gold/20 animate-ping" />
