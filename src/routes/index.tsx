@@ -1,4 +1,13 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import heroSapphire from "@/assets/hero-sapphire.jpg";
 import gemSapphire from "@/assets/gem-sapphire.jpg";
 import gemRuby from "@/assets/gem-ruby.jpg";
@@ -142,7 +151,7 @@ function Icon({ path, className = "size-4" }: { path: string; className?: string
 
 function Index() {
   return (
-    <div className="min-h-dvh bg-background text-foreground selection:bg-gold/20">
+    <div className="min-h-dvh bg-background text-foreground selection:bg-gold/20 overflow-x-hidden">
       <Header />
       <main>
         <Hero />
@@ -212,6 +221,52 @@ function Header() {
             <Icon className="size-3.5" path="M20 15.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 23l1.9-4.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
             WhatsApp
           </a>
+
+          {/* Mobile Navigation Drawer */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <button
+                aria-label="Open navigation menu"
+                className="lg:hidden p-2 rounded-full text-foreground/70 hover:text-primary hover:bg-secondary transition-colors"
+              >
+                <Menu className="size-5" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] flex flex-col justify-between p-6">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <SheetDescription className="sr-only">Mobile navigation links</SheetDescription>
+              <div className="mt-8 flex flex-col gap-6">
+                <a href="#" className="flex items-center gap-2 mb-4">
+                  <span className="grid place-items-center size-9 rounded-full bg-[image:var(--gradient-sapphire)] text-white font-display text-lg italic">A</span>
+                  <span className="font-display text-xl tracking-tight">
+                    <span className="text-primary font-semibold">Aurum</span>
+                    <span className="text-gold ml-1 italic font-medium">Ceylon</span>
+                  </span>
+                </a>
+                <nav className="flex flex-col gap-4 text-xs uppercase tracking-widest font-semibold text-muted-foreground">
+                  {NAV.map((n) => (
+                    <a key={n} href="#" className="hover:text-primary transition-colors py-2 border-b border-border/40">
+                      {n}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+              <div className="flex flex-col gap-4 pt-6 border-t border-border text-xs text-muted-foreground">
+                <div className="flex items-center gap-3">
+                  <button className="hover:text-primary transition-colors">EN</button>
+                  <span className="opacity-30">·</span>
+                  <button className="hover:text-primary transition-colors">USD $</button>
+                </div>
+                <a
+                  href="https://wa.me/94770000000"
+                  className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-emerald text-white text-[10px] uppercase tracking-wider font-semibold"
+                >
+                  <Icon className="size-3.5" path="M20 15.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 23l1.9-4.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  WhatsApp
+                </a>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
